@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="parts">
+      <div class="opening-animation">
+        <h1
+          class="rounded-md bg-cyan-500 shadow-lg shadow-cyan-500/50 hover:shadow-blue-500/50"
+        >
+          The Programmation
+        </h1>
+        <div class="tache-enter"></div>
+      </div>
+      <div id="programmation">
+        <h1 class="text-5xl absolute top-0 left-1/2 transform -translate-x-1/2">
+          What is the Programmation
+        </h1>
+        <div
+          class="points absolute transition-transform inline-grid grid-cols-4 gap-4 flex items-center justify-center h-screen"
+        >
+          <a
+            href="#introGenSubject"
+            class="shadow hover:shadow-2xl hover:shadow-indigo-500/40"
+            ><img
+              src="https://waytolearnx.com/wp-content/uploads/2018/10/Introduction.png"
+              alt=""
+              srcset=""
+          /></a>
+          <a
+            href="#importanceSubject"
+            class="shadow hover:shadow-2xl hover:shadow-indigo-500/40"
+            ><img
+              src="https://www.forbes.fr/wp-content/uploads/2017/01/intelligence-artificielle-872x580.jpg"
+              alt=""
+              srcset=""
+          /></a>
+          <a
+            href="#languages"
+            class="shadow hover:shadow-2xl hover:shadow-indigo-500/40"
+            ><img
+              src="https://qph.cf2.quoracdn.net/main-qimg-af85823a7d2c59f8ca8b15e6c9223f19-lq"
+              alt=""
+              srcset=""
+          /></a>
+          <a
+            href="#howLearn"
+            class="shadow hover:shadow-2xl hover:shadow-indigo-500/40"
+            ><img
+              src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200114192751/How-to-Learn-Programming.png"
+              alt=""
+              srcset=""
+          /></a>
+        </div>
+        <div class="showed-point">
+          <div id="introGenSubject">
+            <h3>Global Introduction</h3>
+            <p>
+              Programming is the art of writing instructions for computers to
+              create software, applications, and websites. It is the backbone of
+              modern technology, enabling us to bring ideas to life through
+              code.
+            </p>
+          </div>
+          <div id="importanceSubject">
+            <h3>
+              The Importance of the Programmation and Problems it can solves
+            </h3>
+            <p>
+              Programming is pervasive in our daily lives, powering our
+              smartphones, computers, connected cars, and even household
+              appliances. It drives innovation and shapes the digital world we
+              live in, allowing us to communicate, work, and entertain ourselves
+              more efficiently. Programming is a powerful problem-solving tool.
+              By breaking down complex problems into smaller, manageable tasks
+              and developing algorithms to solve them, programmers can create
+              tailored solutions. Moreover, programming allows us to automate
+              repetitive tasks, saving time and improving productivity. For
+              example AI take more and more place in our life every day.
+            </p>
+          </div>
+          <div id="languages">
+            <h3>Differents Languages</h3>
+            <p>
+              There is a wide range of programming languages available, each
+              with its own strengths and purposes. Popular languages like
+              Python, JavaScript, Java, and C++ offer versatile and robust
+              options for developing various types of applications and systems.
+            </p>
+          </div>
+          <div id="howLearn">
+            <h3>How Learn</h3>
+            <p>
+              If you are interested in venturing into programming, there is an
+              abundance of online resources, courses, tutorials, and communities
+              available to help you get started. Whether you are a beginner or
+              have prior coding experience, these resources provide
+              opportunities to learn and grow your programming skills.
+            </p>
+          </div>
+        </div>
+        <div class="next w-24 absolute right-0 bottom-0 animate-bounce">
+          <a href="src/projects.html">
+            <span class="">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="{1.5}"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062A1.125 1.125 0 013 16.81V8.688zM12.75 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062a1.125 1.125 0 01-1.683-.977V8.688z"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+      
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

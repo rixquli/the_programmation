@@ -1,0 +1,262 @@
+body {
+  background-color: #1c2331; /* Fond sombre */
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  color: #d9d9d9;
+}
+
+#parts {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.opening-animation {
+  animation: expand 1s ease-in-out forwards;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+#programmation {
+  animation: expand 1s ease-in-out forwards;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.opening-animation * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.opening-animation h1 {
+  font-size: 4em;
+  color: #d9d9d9; /* Couleur claire */
+  margin: 0;
+  opacity: 0;
+  animation: fade-in 2s ease-in-out forwards;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.opening-animation h1:hover {
+  color: #4e79a7;
+}
+
+#projects {
+  /* animation: expand 1s ease-in-out forwards; */
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* #projects .grid-images {
+   height: 55vh; 
+} */
+
+.tache-enter {
+  width: 0;
+  height: 0;
+  background-image: url("circle-15.svg"); /* Remplacez "tache.svg" par le chemin vers votre image SVG */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  animation: expand-tache 2s ease-in-out forwards reverse;
+  z-index: 1;
+}
+
+.tache-exit.exit {
+  width: 0;
+  height: 0;
+  background-image: url("7_Blue_Sphere.svg"); /* Remplacez "tache.svg" par le chemin vers votre image SVG */
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: expand-tache 0.5s ease-in-out forwards;
+  z-index: 1;
+}
+
+#projects h1 {
+  padding-top: 20px;
+}
+
+#programmation h1 {
+  padding-top: 20px;
+}
+#programmation h1::after {
+  content: "?";
+  animation: pulse-after 5s infinite;
+}
+
+.showed-point {
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  /* margin-left: 20px; */
+  overflow: hidden;
+  width: 75vw;
+  height: 50vh;
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 0px 1.5px 3px 2px grey;
+  /*scroll-behavior: smooth;*/
+  background: linear-gradient(
+    311deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(35, 218, 115, 1) 0%,
+    rgba(68, 99, 182, 1) 0%,
+    rgb(111, 1, 236) 100%
+  );
+  animation: from-left 1s forwards;
+}
+
+.showed-point div {
+  padding: 10px 0 0 10px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.showed-point div h3 {
+  font-size: 50px;
+}
+.showed-point div p {
+  font-size: x-large;
+}
+
+.next {
+  animation: barrel-roll 10s forwards infinite;
+}
+.next span svg {
+  /* content: url("arrow.svg"); */
+  border-radius: 50%;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 0 0 rgba(255, 255, 255, 1);
+}
+.next:hover span svg {
+  background-color: #a59999;
+  animation: background-pulse 1s linear infinite;
+}
+
+/* .drid-images {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+} */
+/* .drid-images img {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+} */
+
+@keyframes expand {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes expand-tache {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 300vw;
+    height: 300vw;
+  }
+}
+
+@keyframes from-left {
+  from {
+    transform: translate(-200%, 0);
+  }
+}
+
+@keyframes pulse-after {
+  0% {
+    opacity: 0;
+  }
+  0.5% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0;
+  }
+  15.5% {
+    opacity: 1;
+  }
+  49.5% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  51% {
+    opacity: 1;
+  }
+  74.5% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  75.2% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes barrel-roll {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(360deg);
+  }
+  30% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes background-pulse {
+  to {
+    box-shadow: 0 0 0px 25px rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Define the animation */
+@keyframes pageTransition {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(100);
+  }
+}
+
+/* Apply animation styles */
+.drid-images div.animate-link {
+  z-index: 9;
+  animation: pageTransition 1s ease-in-out;
+}
