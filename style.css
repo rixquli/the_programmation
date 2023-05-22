@@ -132,15 +132,20 @@ body {
 }
 
 .next {
-  animation: barrel-roll 10s forwards infinite;
+  animation-name: bounce, barrel-roll;
+  animation-duration: 1s, 10s;
+  animation-iteration-count: infinite, infinite;
+
+  /* animation: bounce 1s infinite;
+  animation: barrel-roll 10s forwards infinite; */
 }
-.next span svg {
+.next a span svg {
   /* content: url("arrow.svg"); */
   border-radius: 50%;
   transition: background-color 0.3s ease-in-out;
   box-shadow: 0 0 0 rgba(255, 255, 255, 1);
 }
-.next:hover span svg {
+.next:hover a span svg {
   background-color: #a59999;
   animation: background-pulse 1s linear infinite;
 }
@@ -236,6 +241,18 @@ body {
   }
   30% {
     transform: rotate(0deg);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }
 
